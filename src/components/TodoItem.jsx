@@ -1,13 +1,12 @@
-const TodoItem = () => {
+const TodoItem = ({todo, handleDelete}) => {
   return (
-    <div>
-      <li>comprar despensa 
-        <button>eliminar</button>
-      </li>
-
-
-    </div>
+    <li>{todo}
+      <button
+        className='delete-button'
+        onClick={handleDelete}
+      >Eliminar
+      </button>
+    </li>
   )
 }
-
 export default TodoItem
